@@ -19,10 +19,18 @@ image dark rc = "clapping_man.png"
 define no = Character("???")
 define k = Character("Kimi")
 define mc = Character("[mc_name]")
+define us = Character("[username]")
+define an = Character("anxiety")
+define bip = Character("bipolar")
+define adhd = Character("adhd")
+define dep = Character("depression")
+define ocd = Character("ocd")
 
 # The game starts here.
 
 label start:
+
+    $ day = 0
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -65,7 +73,186 @@ label start:
     "alright '[mc_name]' welcome to Mood Calls!"
 
     mc "I really don't know how I ended up like this, I guess it started freshman year, after testing."
-    scene website 
+    scene black
+
+    k "[mc_name], hey, I've noticed that you've been feeling down lately..."
+
+    menu:
+        "What are you talking about?! I feel fine, thank you very much.":
+            jump choice_fine
+
+        "How...how did you know I wasn't feeling okay?":
+            jump choice_accept
+
+    label choice_accept:
+        show kimi wink
+        k "Let's call it bestfriend intuition, and we'll leave it at that."
+        jump continue
+    label choice_fine:
+        show kimi concered
+        k "Hey now, don't be all defensive, I just wanted to help."
+        jump continue
+
+# continue choice 1
+label continue:
+    k "Anyways, I heard about this website that can help! Here I'll send you the link."
+
+    mc "Hmmm, I don't know Kim, I think I can handle this myself..."
+
+    k "I know it doesn't seem like the most trustworthy website but I still think you should give it a try!"
+    show kimi smile
+    k "Remember that I'm still here for you though, so don't worry, but try it. If not for yourself, then do this for me."
+
+    scene room
+
+    mc "*sigh* {i}Fine, I should at least give it a look at, Kimi's just trying to help!{i}"
+
+    scene website
+
+    mc "{i} BetterMood.com...{i}"
+    mc "Huh."
+
+    mc " And then everything..."
+    mc "{b} changed {b}"
+#  SCENE 2 DAY 1
+    scene bedroom
+    mc "Okay... So I just need a username now."
+
+    #USERNAME
+    "What do you want your username to be?"
+    python:
+        username = renpy.input("Insert here: ")
+
+    show connection
+    "Welcome to BetterMooc.com [username] ! Relax and enjoy your time here!"
+
+    mc "{i}Hmmm, what should I do first?{i}"
+
+label website_page:
+    menu:
+        mc "{i}Hmmm, what should I do?{i}"
+
+        "Search the About Page!":
+            mc "So this is like a chatting app...for sad people."
+            mc "{i}Sounds like a blast, thanks Kimi{i}"
+            jump website_page
+
+        "Search the Music Page!":
+            #play song lmao
+            mc "Lofi hiphop, alrighty then."
+            jump website_page
+
+        "Search the Help Page!":
+            mc "'Help?' like actual help?"
+            "you scroll through the forum page"
+            "CALL 1-800-273-8255"
+            "'we're here for you!'"
+            "'you're never alone in this!'"
+            "'don't worry! there's always another way!'"
+            mc "{i}maybe...maybe this will be good for me.{i}"
+            jump website_page
+
+        "Next Page!":
+            jump chatting
+
+label chatting:
+    menu:
+        "I think that's enough, I don't belong here.":
+            mc "I'm fine. I don't need {i}help{i}, I'm not depressed, this is just a passing feeling."
+            mc "Nothing to worry about..."
+            mc "Right?"
+
+            scene black
+            with dissolve
+
+            "{b}{u}Don't downplay your problems, if you don't feel like you used to anymore, talk to someone, they want to help, trust me :){b}{u}"
+            return
+
+        "Start Chatting!":
+            mc "{i}Chatting?{i} I guess I'll give it a try."
+
+            jump game
+
+label game:
+    "...Joining random chatroom!..."
+    "This will take a few minutes..."
+    mc "{i}Ugh, what am I doing here? This is kinda weird.{i}"
+    mc "..."
+    mc "For Kimi"
+    "You've been connected! Be nice!"
+
+    scene chatroom
+
+    adhd "i really didn't mean to do that i swear."
+
+    an "Sure you didn't, and I didn't mean to absolutely destroy you but here we are."
+
+    dep "Can we all just calm down please?"
+
+    an "I will when she does."
+
+    adhd ";P"
+
+    dep "All this? Over a Pokemon game? Really guys?"
+
+    adhd "not a guyyyyy"
+
+    dep "Fine, y'all"
+
+    dep "Is that more to your tastes, m'lady??"
+
+    adhd "4 now >:D"
+
+    mc "{i}This is going so fast... they haven't even noticed me yet..."
+
+    menu:
+        "Should I say something?"
+
+        "Uhm...hello everyone?":
+            jump hello
+
+        "{i}say nothing{i}":
+            jump nothing
+
+
+label hello:
+    bip "oh hey! Sorry we didn't notice you earlier!"
+
+    adhd "hey hey hey"
+
+    ocd "welcome to our mess"
+
+    an "that's weird, I thought we had a closed gc"
+
+    "you have the strange sense that you weren't really supposed to be there."
+
+    dep "the more the merrier ig"
+
+    an "so..."
+
+    "the sinking feeling of displacement burries deeper in your stomach."
+
+    menu:
+        "so...":
+            jump so
+
+        "haha sorry, maybe i should just go?":
+            jump leaving
+
+
+label so:
+    "no one's typed for at least a minute now."
+    "this is really awkward."
+    adhd "so how are you today."
+
+    "this is gonna be a long day."
+
+
+
+
+
+
+
 
     # This ends the game.
 
