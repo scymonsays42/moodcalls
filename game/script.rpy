@@ -9,8 +9,10 @@ image cherry_blossoms = "original.gif"
 # CHAR IMAGES
 # MC
 
-#RC
-image dark rc = "clapping_man.png"
+#KIMI PICS
+image kimi = "clapping_man.png"
+image kimi wink = "clapping_man_wink.png"
+image kimi concerned = "clapping_man_con.png"
 
 # The script of the game goes in this file.
 
@@ -26,6 +28,42 @@ define adhd = Character("adhd")
 define dep = Character("depression")
 define ocd = Character("ocd")
 
+# PHONE??????
+define e = Character('Eileen', color="#c8ffc8")
+
+
+
+
+# Picking up the phone
+transform phone_pickup:
+    yalign 1.0 xalign 0.5
+    yoffset 600
+    easein 0.3 yoffset 200
+
+    on hide:
+        easeout 0.2 yoffset 600
+
+transform phone_message_bubble_tip:
+    xoffset 10
+    yoffset 1
+
+transform phone_message_bubble_tip2:
+    xoffset 165
+    yoffset 1
+
+transform scrolling_out_message:
+    easeout 0.1 yoffset -30 alpha 0
+
+transform incoming_message:
+    yoffset 100
+    alpha 0
+    parallel:
+        easein 0.1 alpha 1
+    parallel:
+        easein 0.2 yoffset 0
+
+    on hide:
+        scrolling_out_message
 # The game starts here.
 
 label start:
@@ -44,6 +82,7 @@ label start:
     "ANY REALTION OR SIMILAR APPEARANCE TO REAL LIFE PEOPLE IS PURELY COINCIDENCIDENTAL"
     "GOOD LUCK AND HAVE FUN! REMEMBER TO EDCUATE YOURSELF ABOUT THESE TOPICS TO BE BETTER AWARE OF ANY PROBLEMS SOMEONE
     CLOSE TO YOU MAY BE EXPERIENCING"
+
 
     # SCENE 1
     scene black
@@ -67,13 +106,17 @@ label start:
             jump choice_girl
 
     label choice_girl:
-        python:
-            mc_name = renpy.input("what is your name?")
+        $mc_name=renpy.call_screen("input_softkeyboard")
+        #python:
+            #mc_name = renpy.input("what is your name?")
 
-    "alright '[mc_name]' welcome to Mood Calls!"
+    "Alright '[mc_name]' welcome to Mood Calls!"
 
     mc "I really don't know how I ended up like this, I guess it started freshman year, after testing."
     scene black
+
+    show kimi:
+        truecenter
 
     k "[mc_name], hey, I've noticed that you've been feeling down lately..."
 
@@ -96,6 +139,8 @@ label start:
 # continue choice 1
 label continue:
     k "Anyways, I heard about this website that can help! Here I'll send you the link."
+
+
 
     mc "Hmmm, I don't know Kim, I think I can handle this myself..."
 
@@ -120,8 +165,7 @@ label continue:
 
     #USERNAME
     "What do you want your username to be?"
-    python:
-        username = renpy.input("Insert here: ")
+    $username=renpy.call_screen("input_softkeyboard")
 
     show connection
     "Welcome to BetterMooc.com [username] ! Relax and enjoy your time here!"
@@ -176,9 +220,37 @@ label chatting:
 label game:
     "...Joining random chatroom!..."
     "This will take a few minutes..."
+
+    show phone at phone_pickup
+
+    $renpy.pause(0.2)
+    show screen phone_message("kimi <3", "so did you check it out yet?")
+    $renpy.pause(0.2)
+    call screen phone_reply("yeah :)", "nope", "i don't know about this...")
+
+label yeah:
+    hide screen phone_message
+    $renpy.pause(0.1)
+
+    show screen phone_message2("[mc_name]", "yeah i did :), so far it seems cool.")
+    $renpy.pause()
+
+    hide screen phone_message2
+    $renpy.pause(0.1)
+
+    show screen phone_message("kimi <3", "this will be good for you!")
+    $ renpy.pause()
+
+    hide screen phone_message
+    hide phone
+
+    $renpy.pause(0.2)
+    jump continue2
+
+label continue2:
     mc "{i}Ugh, what am I doing here? This is kinda weird.{i}"
     mc "..."
-    mc "For Kimi"
+    mc "{i}For Kimi{i}"
     "You've been connected! Be nice!"
 
     scene chatroom
@@ -252,7 +324,7 @@ label so:
 
 
 
-
+#label jump = game over
 
     # This ends the game.
 
