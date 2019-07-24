@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 227, in script
+    
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+Exception: Screen phone_message is not known.
+
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 227, in script
+    
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 1947, in execute
+    self.call("execute")
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 1935, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\screen.py", line 1092, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen phone_message is not known.
+
+
+Windows-8-6.2.9200
+Ren'Py 7.3.2.320
+Mood calls 1.0
+Wed Jul 24 03:06:38 2019
