@@ -9,8 +9,10 @@ image cherry_blossoms = "original.gif"
 # CHAR IMAGES
 # MC
 
-#RC
-image dark rc = "clapping_man.png"
+#KIMI PICS
+image kimi = "clapping_man.png"
+image kimi_wink = "wink.png"
+image kimi_concerned = "concerned.png"
 
 # The script of the game goes in this file.
 
@@ -20,11 +22,15 @@ define no = Character("???")
 define k = Character("Kimi")
 define mc = Character("[mc_name]")
 define us = Character("[username]")
-define an = Character("anxiety")
-define bip = Character("bipolar")
-define adhd = Character("adhd")
-define dep = Character("depression")
-define ocd = Character("ocd")
+define an = Character("the_anxious_boi")
+define bip = Character("expresso.depresso")
+define adhd = Character("hyper_ava")
+define dep = Character("dr.polar")
+define ocd = Character("clean_o_boi")
+
+# PHONE??????
+
+# Picking up the phone
 
 # The game starts here.
 
@@ -41,9 +47,10 @@ label start:
     #WARNWARN
 
     "WARNING! THIS IS ABOUT CERTAIN TOPICS SUCH AS MENTAL ILLNESSES, SEXUALITY, ETC"
-    "ANY REALTION OR SIMULAR APPEARANCE TO AND REAL LIFE PEOPLE IS PURELY COINCIDENCE"
-    "GOOD LUCK AND HAVE FUN! REMEMBER TO EDCUATE YOURSELF ABOUT THESE TOPICS TO BE MORE WELL AWARE OF A PROBLEM SOMEONE
+    "ANY REALTION OR SIMILAR APPEARANCE TO REAL LIFE PEOPLE IS PURELY COINCIDENCIDENTAL"
+    "GOOD LUCK AND HAVE FUN! REMEMBER TO EDCUATE YOURSELF ABOUT THESE TOPICS TO BE BETTER AWARE OF ANY PROBLEMS SOMEONE
     CLOSE TO YOU MAY BE EXPERIENCING"
+
 
     # SCENE 1
     scene black
@@ -67,13 +74,17 @@ label start:
             jump choice_girl
 
     label choice_girl:
-        python:
-            mc_name = renpy.input("what is your name?")
+        $mc_name=renpy.call_screen("input_softkeyboard")
+        #python:
+            #mc_name = renpy.input("what is your name?")
 
-    "alright '[mc_name]' welcome to Mood Calls!"
+    "Alright '[mc_name]' welcome to Mood Calls!"
 
     mc "I really don't know how I ended up like this, I guess it started freshman year, after testing."
     scene black
+
+    show kimi:
+        truecenter
 
     k "[mc_name], hey, I've noticed that you've been feeling down lately..."
 
@@ -85,11 +96,13 @@ label start:
             jump choice_accept
 
     label choice_accept:
-        show kimi wink
+        hide kimi
+        show kimi_wink
         k "Let's call it bestfriend intuition, and we'll leave it at that."
         jump continue
     label choice_fine:
-        show kimi concered
+        hide kimi
+        show kimi_concered
         k "Hey now, don't be all defensive, I just wanted to help."
         jump continue
 
@@ -97,10 +110,12 @@ label start:
 label continue:
     k "Anyways, I heard about this website that can help! Here I'll send you the link."
 
+
+
     mc "Hmmm, I don't know Kim, I think I can handle this myself..."
 
     k "I know it doesn't seem like the most trustworthy website but I still think you should give it a try!"
-    show kimi smile
+    show kimi_smile
     k "Remember that I'm still here for you though, so don't worry, but try it. If not for yourself, then do this for me."
 
     scene room
@@ -120,8 +135,7 @@ label continue:
 
     #USERNAME
     "What do you want your username to be?"
-    python:
-        username = renpy.input("Insert here: ")
+    $username=renpy.call_screen("input_softkeyboard")
 
     show connection
     "Welcome to BetterMooc.com [username] ! Relax and enjoy your time here!"
@@ -176,9 +190,37 @@ label chatting:
 label game:
     "...Joining random chatroom!..."
     "This will take a few minutes..."
+
+    #show phone at phone_pickup
+
+    #$renpy.pause(0.2)
+    #show screen phone_message("kimi <3", "so did you check it out yet?")
+    #$renpy.pause(0.2)
+    #call screen phone_reply("yeah :)", "nope", "i don't know about this...")
+
+#label yeah:
+    #hide screen phone_message
+    #$renpy.pause(0.1)
+
+    #show screen phone_message2("[mc_name]", "yeah i did :), so far it seems cool.")
+    #$renpy.pause()
+
+    #hide screen phone_message2
+    #$renpy.pause(0.1)
+
+    #show screen phone_message("kimi <3", "this will be good for you!")
+    #$ renpy.pause()
+
+    #hide screen phone_message
+    #hide phone
+
+    #$renpy.pause(0.2)
+    #jump continue2
+
+#label continue2:
     mc "{i}Ugh, what am I doing here? This is kinda weird.{i}"
     mc "..."
-    mc "For Kimi"
+    mc "{i}For Kimi{i}"
     "You've been connected! Be nice!"
 
     scene chatroom
@@ -205,17 +247,48 @@ label game:
 
     mc "{i}This is going so fast... they haven't even noticed me yet..."
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    adhd "that was so weird yesterday."
+
+    bip "ugh you guys can be so difficulr sometimes"
+
+    adhd " why are you guys acting so weird. "
+
+    ocd "there's a new person here!"
+
+    "..."
+
+    de "lmao i'm so sorry [mc_username]"
+
     menu:
-        "Should I say something?"
-
-        "Uhm...hello everyone?":
-            jump hello
-
-        "{i}say nothing{i}":
-            jump nothing
+        "oh haha it's okay I'm just new to this":
+            jump newkid
+        "lolol rip it's fine":
+            jump newkid
 
 
-label hello:
+label newkid:
     bip "oh hey! Sorry we didn't notice you earlier!"
 
     adhd "hey hey hey"
@@ -224,7 +297,7 @@ label hello:
 
     an "that's weird, I thought we had a closed gc"
 
-    "you have the strange sense that you weren't really supposed to be there."
+    "You have the strange sense that you weren't really supposed to be there."
 
     dep "the more the merrier ig"
 
@@ -239,20 +312,74 @@ label hello:
         "haha sorry, maybe i should just go?":
             jump leaving
 
-
 label so:
-    "no one's typed for at least a minute now."
-    "this is really awkward."
-    adhd "so how are you today."
+    us "so..."
 
-    "this is gonna be a long day."
+    an "dw, we wont bite."
+
+    dep "yeah when I first started I was scared too lol"
+
+    jump cont
+
+label leaving:
+    us "haha sorry, maybe i should just go."
+
+    an "no no, it's fine :)"
+
+    bip "yeah dw about it"
+
+    adhd "weLcomE tO oUr gC!!1!"
+
+    jump cont
+
+label cont:
+    adhd "wEre alL saNe hEere"
+
+    an "ur gonna scare them off dude."
+
+    adhd ">:3c"
+
+    bip "yeah so we should probably introduce ourselves."
+
+    dep "ig ur right, sound off"
+
+    an "I'll start off if that's ok, my name's Adam."
+
+    ocd "I'm Oscar, nice to meet you"
+
+    bip "it's ur boy, Ben"
+
+    adhd "HeLlO mORtaLs I AM THE ALMIGHTLY AVA, BOW BEFORE ME \(*^*\)"
+
+    dep "Devin"
+
+    menu:
+        mc "What should I say?"
+
+        "my name is [mc_name], it's nice to meet you guys!":
+            mc "{i}Well at least this is gonna add some excitement to my life at the very least.{i}"
+
+            jump cont2
+
+        "actually I'd rather you call me by my username":
+            mc "uhm, actually for now, I'd rather be called by my username, just until I get to know everyone better '^^"
+
+            an "fair enough, whatever makes you feel comfortable"
+
+            mc "thanks! I hope we all get along :)"
+
+            jump cont3
+
+# DAY 2
+
+label cont2:
 
 
 
 
 
 
-
+#label jump = game over
 
     # This ends the game.
 

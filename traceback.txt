@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 282, in script
+    
+Exception: Sayer 'd' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 282, in script
+    
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 676, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 574, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'd' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 7.3.2.320
+Mood calls 1.0
+Wed Jul 24 23:13:29 2019
