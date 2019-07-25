@@ -1,9 +1,32 @@
+<<<<<<< HEAD
 Wed Jul 24 22:32:09 2019
+=======
+<<<<<<< HEAD
+Tue Jul 23 15:43:19 2019
+=======
+Tue Jul 23 21:25:45 2019
+>>>>>>> 352d16ed3a72073ebb4fa36d9a43c4b227b95ca4
+>>>>>>> decd415947fde11d8bd09ea317deffd33fca7d9b
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
  
 
+<<<<<<< HEAD
 Bootstrap to the start of init.init took 0.14s
+=======
+<<<<<<< HEAD
+Bootstrap to the start of init.init took 0.14s
+Early init took 0.01s
+Loader init took 0.12s
+Loading error handling took 0.11s
+Loading script took 1.64s
+Loading save slot metadata. took 0.10s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.45s
+=======
+Bootstrap to the start of init.init took 0.18s
+>>>>>>> decd415947fde11d8bd09ea317deffd33fca7d9b
 Early init took 0.01s
 Loader init took 0.07s
 Loading error handling took 0.07s
@@ -11,11 +34,25 @@ Loading script took 0.41s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
+<<<<<<< HEAD
 Running init code took 0.19s
 Loading analysis data took 0.06s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Dump and make backups. took 0.12s
+=======
+Running init code took 0.53s
+>>>>>>> 352d16ed3a72073ebb4fa36d9a43c4b227b95ca4
+Loading analysis data took 0.07s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\moodcalls':
+<<<<<<< HEAD
+Dump and make backups. took 0.13s
+=======
+Dump and make backups. took 0.43s
+>>>>>>> 352d16ed3a72073ebb4fa36d9a43c4b227b95ca4
+>>>>>>> decd415947fde11d8bd09ea317deffd33fca7d9b
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.06s
@@ -24,10 +61,24 @@ Creating interface object took 0.13s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.01s
+<<<<<<< HEAD
 Load screen analysis took 0.04s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.20s
+=======
+<<<<<<< HEAD
+Load screen analysis took 0.02s
+Analyze screens took 0.03s
+Save screen analysis took 0.16s
+Prepare screens took 0.11s
+=======
+Load screen analysis took 0.01s
+Analyze screens took 0.03s
+Save screen analysis took 0.17s
+Prepare screens took 0.12s
+>>>>>>> 352d16ed3a72073ebb4fa36d9a43c4b227b95ca4
+>>>>>>> decd415947fde11d8bd09ea317deffd33fca7d9b
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.14s
 Running _start took 0.00s
@@ -35,7 +86,11 @@ Performance test:
 Interface start took 0.06s
 Couldn't import angle renderer:
 Traceback (most recent call last):
+<<<<<<< HEAD
+  File "C:\Users\Student\Desktop\renpyy\renpy-7.3.2-sdk\renpy\display\core.py", line 1935, in make_draw
+=======
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\core.py", line 1935, in make_draw
+>>>>>>> 352d16ed3a72073ebb4fa36d9a43c4b227b95ca4
     __import__(mod)
 ImportError: DLL load failed: The specified module could not be found.
 Unknown renderer: angle
@@ -288,7 +343,21 @@ Texture testing:
 - 2048px textures work.
 FBO Maximum Texture Size: 16384
 Root FBO is: 0
+<<<<<<< HEAD
 Total time until interface ready: 2.5759999752s
+=======
+<<<<<<< HEAD
+Total time until interface ready: 7.94099998474s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.018667 seconds.
+- Frame drawn at 0.090667 seconds.
+- Frame drawn at 0.172667 seconds.
+- Frame drawn at 0.249667 seconds.
+- 0.249667 seconds to render 5 frames.
+=======
+Total time until interface ready: 7.69199991226s
+>>>>>>> decd415947fde11d8bd09ea317deffd33fca7d9b
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.016000 seconds.
@@ -2283,4 +2352,16 @@ Exception: Sayer 'd' is not defined.
 While running game code:
   File "game/script.rpy", line 282, in script
     
+<<<<<<< HEAD
 Exception: Sayer 'd' is not defined.
+=======
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 1947, in execute
+    self.call("execute")
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 1935, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_sc
+>>>>>>> 352d16ed3a72073ebb4fa36d9a43c4b227b95ca4
+>>>>>>> decd415947fde11d8bd09ea317deffd33fca7d9b
