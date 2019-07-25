@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 235: is not terminated with a newline. (Check strings and parenthesis.)
-        show screen phone_message2("[mc_name]", "yeah i did :), so far it seems cool."
+File "game/script.rpy", line 359: end of line expected.
+    "my name is [mc_name], it's nice to meet you guys!":j
+                                                        ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Tue Jul 23 23:16:53 2019
+Wed Jul 24 23:05:43 2019
