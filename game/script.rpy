@@ -108,7 +108,7 @@ label start:
 
 # continue choice 1
 label continue:
-    k "Anyways, I heard about this club that can help! the club room is in C-3"
+    k "Anyways, I heard about this club that can help! The club room is in C-3"
 
     mc "Hmmm, I don't know Kimi, I think I can handle this myself..."
 
@@ -120,7 +120,7 @@ label continue:
 
     mc "*sigh* {i}Fine, I should at least give it a look at, Kimi's just trying to help!{i}"
 
-    mc "{i}BetterMoodClub, that sure sounds like a blast.{i}"
+    mc "{i}BetterMoodClub, that sure sounds like a cheesy visual novel.{i}"
 
     mc " And then everything..."
     mc "{b} changed {b}"
@@ -132,7 +132,7 @@ label continue:
 
     #scene classroom
 
-    "There was a total of five people in this room, but it sounded like there was 20."
+    "There was a total of five people in this room, but it sounded like there was 200."
     "In the far side of the room, you could see a very deep rooted argument taking place."
 
     adhd "I didn't mean to do that! I swear!"
@@ -238,7 +238,7 @@ label cont2:
 
     mc "Will you at least go with me today?"
 
-    k "Sorry hon, you know I have work... Maybe another time, okay?"
+    k "Sorry hon, you know I have stuff going on... Maybe another time, okay?"
 
     mc "Uh-huh okay."
 
@@ -270,7 +270,7 @@ label cont2:
 
     dep "{i}Why wouldn't we want her to notice us?{i}"
 
-    bip "{i}Or how about this. We {i}talk{i} to her like a human being?{i}"
+    bip "{i}Or how about this. We {i}talk{i} to her like a normal human being?{i}"
 
     "They all simultaniously turned to face you."
 
@@ -278,7 +278,7 @@ label cont2:
 
     dep "Welcome back?"
 
-    adhd "Uh yeah, welcome!"
+    adhd "Yeah, welcome!"
 
     ocd "I'm so sorry about our behavior."
 
@@ -344,7 +344,7 @@ label day3:
     mc "{i}It's only been a month since I started attending the club. And as always, Kimi was right. This really did help me.{i}"
     mc "{i}Our usual club activits is usually just talking to each other, being able to have a save outlet for our problems. We talk about our day, sometimes our triggers, and how to cope with them.{i}"
     mc "{i}It's nice having a group of friends that I can really talk to about this, making me feel less alone in the world.{i}"
-    mc "{i}I remember when I had my first panic attack, and luckily I was walking to the clubroom with Adam at the time...{i}"
+    mc "{i}I remember when I had my first panic attack, and luckily I was walking to my class the Adam appeared out of no where....{i}"
 
     jump flashback
 
