@@ -1,7 +1,13 @@
 # BACKGROUNDS
 
 image black = "black.jpg"
-#image classroom = "clubroom.png"
+image clubroom = "classroom v2.png"
+image classroom = "classroom v1.png"
+image bed_morn = "bedroom morning.png"
+image bed_day = "bedroom day-afternoon.png"
+image bed_ev = "bedroom evening.png"
+image bed_night = "bedroom night.png"
+image hall = "Hallway.png"
 # EXTRAS
 
 image cherry_blossoms = "original.gif"
@@ -78,10 +84,10 @@ label start:
 
     label choice_girl:
         python:
-            mc_name = renpy.input("what is your name?")
+            mc_name = renpy.input("What is your name?")
 
     "Alright '[mc_name]' welcome to Mood Calls!"
-    scene black
+    scene hall
 
     show kimi:
         truecenter
@@ -116,21 +122,23 @@ label continue:
     show kimi_smile
     k "Remember that I'm still here for you though, so don't worry, but try it. If not for yourself, then do this for me."
 
-    scene room
+    scene bed_night
 
     mc "*sigh* {i}Fine, I should at least give it a look at, Kimi's just trying to help!{i}"
 
     mc "{i}BetterMoodClub, that sure sounds like a cheesy visual novel.{i}"
 
+    scene black
+    
     mc " And then everything..."
     mc "{b} changed {b}"
 #  SCENE 2 DAY 1
-    #scene bedroom
+    scene bed_morn
 
     mc "{i}Alright today's the day, I gotta check out that club, at least I could tell Kimi that I made an attempt. {i}"
     mc "{i}Room 3-C...{i}"
 
-    #scene classroom
+    scene clubroom
 
     "There was a total of five people in this room, but it sounded like there was 200."
     "In the far side of the room, you could see a very deep rooted argument taking place."
@@ -198,19 +206,22 @@ label cont1:
 
     dep "{i}Hopefully...{i}"
 
-    #scene bedroom
+    scene bed_ev
 
     mc "{i}That was awful, and super embarassing, and I never wanna do that again.{i}"
     mc "{i}This is so bad, I think one of them was even in my class.{i}"
     mc "{i}Thanks Kimi.{i}"
 # CH1 DAY 2
+
+    scene classroom
+
     k "So, did you go to the club yesterday?"
 
 menu:
-    "Yeah I checked it out."
+    "Yeah I checked it out.":
         jump honest
 
-    "Nope, not yet."
+    "Nope, not yet.":
         jump yikes
 
 label honest:
@@ -222,13 +233,14 @@ label honest:
     jump cont2
 
 label yikes:
+
     mc "No I didn't get the chance."
-    mc "I think I'll ust skip it, I have homework to catch up on, y'know?"
+    mc "I think I'll just skip it, I have homework to catch up on, y'know?"
 
     k "Nonsense, we're in the same class, and we both know that you've already done the work for this week and next."
     k "Plus, being in a clul might be fun for you! Don't you want some more excitement in your life?"
 
-    jump cont2:
+    jump cont2
 
 label cont2:
 
@@ -244,9 +256,13 @@ label cont2:
 
     k "Just, trust me, this will be good for you."
 
+    show hall
+
     "And that's how you ended up back to where you started, the door to class 3-C."
 
     mc "{i}Second time's a charm I guess.{i}"
+
+    show clubroom
 
     "You peeked your head in the door, luckily there was no yelling, only a group of friends hovering over a make-shift table out of desks."
 
@@ -314,11 +330,11 @@ label cont3:
     dep "And I'm Devin, the leader of this club, so make yourself comfortable here."
 
     menu:
-        "My name's [mc_name], it's nice to meet you guys."
+        "My name's [mc_name], it's nice to meet you guys.":
 
             jump name_reveal
 
-        "Oh uhm, alright, you can call me [mc_name]."
+        "Oh uhm, alright, you can call me [mc_name].":
             an "Hey, don't be so shy, we're all friends here now."
 
             an "I hope that you can be comfortable here."
@@ -341,6 +357,8 @@ label name_reveal:
 
 label day3:
 
+    scene black
+
     mc "{i}It's only been a month since I started attending the club. And as always, Kimi was right. This really did help me.{i}"
     mc "{i}Our usual club activits is usually just talking to each other, being able to have a save outlet for our problems. We talk about our day, sometimes our triggers, and how to cope with them.{i}"
     mc "{i}It's nice having a group of friends that I can really talk to about this, making me feel less alone in the world.{i}"
@@ -349,7 +367,10 @@ label day3:
     jump flashback
 
 label flashback:
-    mc "{i}I couldn't see. I couldn't breath. I didn't know what to do. But then I heard a familiar voice breaking through to me. It was guiding me, reminding me how to breathe
+
+    scene black
+
+    mc "{i}I couldn't see. I couldn't breath. I didn't know what to do. But then I heard a familiar voice breaking through to me. It was guiding me, reminding me how to breathe."
 
 
 

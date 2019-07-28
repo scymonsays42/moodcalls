@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 352: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        mc "{i}I couldn't see. I couldn't breath. I didn't know what to do. But then I heard a familiar voice breaking through to me. It was guiding me, reminding me how to breathe
+File "game/script.rpy", line 237: end of line expected.
+    jump cont2:
+              ^
+
+File "game/script.rpy", line 323: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "My name's [mc_name], it's nice to meet you guys."
+                                                      ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Fri Jul 26 03:39:44 2019
+Sun Jul 28 11:40:53 2019
