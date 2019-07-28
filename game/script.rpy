@@ -129,7 +129,7 @@ label continue:
     mc "{i}BetterMoodClub, that sure sounds like a cheesy visual novel.{i}"
 
     scene black
-    
+
     mc " And then everything..."
     mc "{b} changed {b}"
 #  SCENE 2 DAY 1
@@ -371,6 +371,83 @@ label flashback:
     scene black
 
     mc "{i}I couldn't see. I couldn't breath. I didn't know what to do. But then I heard a familiar voice breaking through to me. It was guiding me, reminding me how to breathe."
+
+    an "Hey, hey it's okay, just look at me and take deep breaths [mc_name]."
+
+    an "In, and out with me hm?"
+
+    mc "{i}Why is he helping me?{i}"
+    mc "{i}Why is he doing this?{i}"
+
+    mc "And with his help, my panic attack was soon over, and I was suddenly more than aware of where I was and who I was with."
+
+    an "Feeling better now?"
+
+    mc "Yeah, yeah, thank you Adam."
+
+    jump day3cont
+
+label day3cont:
+    scene clubroom
+
+    an "So how is everyone today?"
+
+    menu:
+        "Good.":
+            mc "I'm feeling pretty good today."
+            an "Ah, well that's good [mc_name]!"
+
+            jump day3cont1
+
+        "Eh.":
+            mc "I could be better..."
+            an "Hm, that's a shame, do you wanna talk about it?"
+
+            jump day3cont1
+
+label day3cont1:
+    
+    adhd "Hey do you lovebirds wanna include the whole class in this discussion or?"
+
+    bip "No actually guys, I think that our Prince here has found his long lost princess."
+
+    ocd "Benjamin, leave them alone."
+    ocd "Sometimes I wonder how we stand your nosiness sometimes."
+
+    dep "Yeah Benji, don't you have a girl waiting for you as well?"
+    dep "Oh right, you're still holding out for your Minecraft girlfriend."
+
+    bip "She's not a Minecraft girlfriend! She's real!"
+
+    adhd "Yeah in your dreams."
+
+    bip "Whatever, let's just leave the {i}lovebirds{i} alone."
+
+    dep "Seriously Dev, knock it off, that wasn't cool."
+
+    adhd "Yeah {i}Dev{i} knooockk itt ooofff."
+
+    "You could see out of the corner of your eye, Adam's face contoring into a fake smile, a sort of anxious and angry aura began to surrond him."
+
+    #show an_smile
+
+    an "Yeah {i}Devin{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
+
+    "The clubroom air stilled. You silently looked around the room, Ava was fidgeting was her fingers, never looking at the same place twice, Ben looked slightly angry, but mostly confused. Oscar was instantly fizated on a point on the floor, seemingly unaware of the world around him."
+    "Devin looked around the room as well, hugging himself, his leadership role seeming to fall apart. You finally looked back at Adam who looked even more anxious from the quiet then before."
+
+    mc "{i}This isn't good.{i}"
+    mc"{i}I gotta clear the air somehow.{i}"
+
+    menu:
+        "Let's go on a trip!":
+            mc "Hey guys, how about we go on a club field trip or something! I feel like that'll be fun."
+
+
+        "other":
+            mc "yikes sis"
+
+
 
 
 

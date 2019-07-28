@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 237: end of line expected.
-    jump cont2:
-              ^
-
-File "game/script.rpy", line 323: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "My name's [mc_name], it's nice to meet you guys."
-                                                      ^
+File "game/script.rpy", line 444: end of line expected.
+    mc "yikes sis"s
+                  ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Sun Jul 28 11:40:53 2019
+Sun Jul 28 15:42:52 2019
