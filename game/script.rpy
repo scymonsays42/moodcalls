@@ -425,15 +425,15 @@ label day3cont1:
 
     bip "Whatever, let's just leave the {i}lovebirds{i} alone."
 
-    dep "Seriously Dev, knock it off, that wasn't cool."
+    dep "Seriously , Ben knock it off, that wasn't cool."
 
-    adhd "Yeah {i}Dev{i} knooockk itt ooofff."
+    adhd "Yeah {i}Ben{i} knooockk itt ooofff."
 
     "You could see out of the corner of your eye, Adam's face contoring into a fake smile, a sort of anxious and angry aura began to surrond him."
 
     #show an_smile
 
-    an "Yeah {i}Devin{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
+    an "Yeah {i}Ben{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
 
     "The clubroom air stilled. You silently looked around the room, Ava was fidgeting was her fingers, never looking at the same place twice, Ben looked slightly angry, but mostly confused. Oscar was instantly fizated on a point on the floor, seemingly unaware of the world around him."
     "Devin looked around the room as well, hugging himself, his leadership role seeming to fall apart. You finally looked back at Adam who looked even more anxious from the quiet then before."
@@ -447,7 +447,7 @@ label day3cont1:
 
 
         "other":
-            mc "yikes sis"
+            mc "yikes this is uncomfortable"
 
 
 
