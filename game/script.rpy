@@ -14,6 +14,8 @@ image cherry_blossoms = "original.gif"
 
 # CHAR IMAGES
 
+# AVA
+image ava_normal = "Ava sketch.png"
 # ADAM
 image an_normal = "anxiety_sketch.png"
 # MC
@@ -406,7 +408,7 @@ label day3cont:
             jump day3cont1
 
 label day3cont1:
-    
+    a
     adhd "Hey do you lovebirds wanna include the whole class in this discussion or?"
 
     bip "No actually guys, I think that our Prince here has found his long lost princess."
