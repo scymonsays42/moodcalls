@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 359: end of line expected.
-    "my name is [mc_name], it's nice to meet you guys!":j
-                                                        ^
+File "game/script.rpy", line 411: expected statement.
+    a
+     ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Wed Jul 24 23:05:43 2019
+Sun Jul 28 20:40:42 2019

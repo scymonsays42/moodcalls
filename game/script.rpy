@@ -1,12 +1,23 @@
 # BACKGROUNDS
 
 image black = "black.jpg"
-image website = "website.png"
+image clubroom = "classroom v2.png"
+image classroom = "classroom v1.png"
+image bed_morn = "bedroom morning.png"
+image bed_day = "bedroom day-afternoon.png"
+image bed_ev = "bedroom evening.png"
+image bed_night = "bedroom night.png"
+image hall = "Hallway.png"
 # EXTRAS
 
 image cherry_blossoms = "original.gif"
 
 # CHAR IMAGES
+
+# AVA
+image ava_normal = "Ava sketch.png"
+# ADAM
+image an_normal = "anxiety_sketch.png"
 # MC
 
 #KIMI PICS
@@ -22,11 +33,11 @@ define no = Character("???")
 define k = Character("Kimi")
 define mc = Character("[mc_name]")
 define us = Character("[username]")
-define an = Character("the_anxious_boi")
-define bip = Character("expresso.depresso")
-define adhd = Character("hyper_ava")
-define dep = Character("dr.polar")
-define ocd = Character("clean_o_boi")
+define an = Character("Adam")
+define bip = Character("Ben")
+define adhd = Character("Ava")
+define dep = Character("Devin")
+define ocd = Character("Oscar")
 
 # PHONE??????
 
@@ -52,20 +63,20 @@ label start:
     CLOSE TO YOU MAY BE EXPERIENCING"
 
 
-    # SCENE 1
+    # DAY 0
     scene black
     no "{i}I've always been different...{i}"
-    no "I guess I have tried to be a normal person, practicing my faces in the mirror."
-    no "Until once day, my friend had recommended me to a website."
-    no "A website they said would {i}help{i}."
-    no "At first I thought it was weird."
-    no "{i}'How is this gonna help me?'{i}"
-    no "But still..."
-    no "I gave it a try..."
+    no "{i}I guess I've never felt the emotions that I was supposed to feel, like happiness, or sadness. I've always just been {i}fine{i}.{i}"
+    no "{i}Until once day, my friend had recommended me to an outreach club at school. {i}"
+    no "{i}A club she said would {i}help{i}.{i}"
+    no "{i}At first I thought it was weird.{i}"
+    no "'How is this gonna help me?'"
+    no "{i}But still...{i}"
+    no "{i}I gave it a try...{i}"
 
     #  BOY OR GIRL
-    scene website
-    "are you a boy or a girl?"
+    scene opening
+    "Are you a boy or a girl?"
     menu:
         "boy!":
             jump choice_girl
@@ -74,14 +85,11 @@ label start:
             jump choice_girl
 
     label choice_girl:
-        $mc_name=renpy.call_screen("input_softkeyboard")
-        #python:
-            #mc_name = renpy.input("what is your name?")
+        python:
+            mc_name = renpy.input("What is your name?")
 
     "Alright '[mc_name]' welcome to Mood Calls!"
-
-    mc "I really don't know how I ended up like this, I guess it started freshman year, after testing."
-    scene black
+    scene hall
 
     show kimi:
         truecenter
@@ -108,271 +116,340 @@ label start:
 
 # continue choice 1
 label continue:
-    k "Anyways, I heard about this website that can help! Here I'll send you the link."
+    k "Anyways, I heard about this club that can help! The club room is in C-3"
 
+    mc "Hmmm, I don't know Kimi, I think I can handle this myself..."
 
-
-    mc "Hmmm, I don't know Kim, I think I can handle this myself..."
-
-    k "I know it doesn't seem like the most trustworthy website but I still think you should give it a try!"
+    k "I know it doesn't seem ideal, but I still think you should give it a try!"
     show kimi_smile
     k "Remember that I'm still here for you though, so don't worry, but try it. If not for yourself, then do this for me."
 
-    scene room
+    scene bed_night
 
     mc "*sigh* {i}Fine, I should at least give it a look at, Kimi's just trying to help!{i}"
 
-    scene website
+    mc "{i}BetterMoodClub, that sure sounds like a cheesy visual novel.{i}"
 
-    mc "{i} BetterMood.com...{i}"
-    mc "Huh."
+    scene black
 
     mc " And then everything..."
     mc "{b} changed {b}"
 #  SCENE 2 DAY 1
-    scene bedroom
-    mc "Okay... So I just need a username now."
+    scene bed_morn
 
-    #USERNAME
-    "What do you want your username to be?"
-    $username=renpy.call_screen("input_softkeyboard")
+    mc "{i}Alright today's the day, I gotta check out that club, at least I could tell Kimi that I made an attempt. {i}"
+    mc "{i}Room 3-C...{i}"
 
-    show connection
-    "Welcome to BetterMooc.com [username] ! Relax and enjoy your time here!"
+    scene clubroom
 
-    mc "{i}Hmmm, what should I do first?{i}"
+    "There was a total of five people in this room, but it sounded like there was 200."
+    "In the far side of the room, you could see a very deep rooted argument taking place."
 
-label website_page:
-    menu:
-        mc "{i}Hmmm, what should I do?{i}"
+    adhd "I didn't mean to do that! I swear!"
 
-        "Search the About Page!":
-            mc "So this is like a chatting app...for sad people."
-            mc "{i}Sounds like a blast, thanks Kimi{i}"
-            jump website_page
+    show an_normal
 
-        "Search the Music Page!":
-            #play song lmao
-            mc "Lofi hiphop, alrighty then."
-            jump website_page
+    an "Oh sure you didn't, and I didn't mean to utterly destroy you in our Pokemon tournament yesterday."
 
-        "Search the Help Page!":
-            mc "'Help?' like actual help?"
-            "you scroll through the forum page"
-            "CALL 1-800-273-8255"
-            "'we're here for you!'"
-            "'you're never alone in this!'"
-            "'don't worry! there's always another way!'"
-            mc "{i}maybe...maybe this will be good for me.{i}"
-            jump website_page
+    dep "Can we please drop this? You two are acting like children."
 
-        "Next Page!":
-            jump chatting
+    an "I can, but I don't know about Ava here."
 
-label chatting:
-    menu:
-        "I think that's enough, I don't belong here.":
-            mc "I'm fine. I don't need {i}help{i}, I'm not depressed, this is just a passing feeling."
-            mc "Nothing to worry about..."
-            mc "Right?"
+    adhd "Hey! What's that supposed to mean?!"
 
-            scene black
-            with dissolve
+    adhd "Oosccaarr, Adam's bullying me!"
 
-            "{b}{u}Don't downplay your problems, if you don't feel like you used to anymore, talk to someone, they want to help, trust me :){b}{u}"
-            return
+    ocd "All this? Over a Pokemon game, really?"
 
-        "Start Chatting!":
-            mc "{i}Chatting?{i} I guess I'll give it a try."
+    adhd "You guys just don't understand!"
 
-            jump game
+    bip "You guys can get really annoying sometimes you know?"
 
-label game:
-    "...Joining random chatroom!..."
-    "This will take a few minutes..."
+    ocd "Agreed, and look at the mess you guys made."
 
-    #show phone at phone_pickup
+menu:
+    mc "They haven't noticed me yet with all this yelling... Should I say something?"
 
-    #$renpy.pause(0.2)
-    #show screen phone_message("kimi <3", "so did you check it out yet?")
-    #$renpy.pause(0.2)
-    #call screen phone_reply("yeah :)", "nope", "i don't know about this...")
+    "Uhm...Hello?":
+        mc "Ahem, hello?"
+        jump cont1
 
-#label yeah:
-    #hide screen phone_message
-    #$renpy.pause(0.1)
+    "...":
+        mc "{i}Maybe I should just go, I technically checked it out for Kimi if she asks.{i}"
+        "You try to turn and leave but you end up bumping very loudly into the door you thought was open."
+        jump cont1
 
-    #show screen phone_message2("[mc_name]", "yeah i did :), so far it seems cool.")
-    #$renpy.pause()
+label cont1:
+    "All five heads immediatley turned to your direction."
 
-    #hide screen phone_message2
-    #$renpy.pause(0.1)
+    bip "Oh hey! Sorry we didn't notice you earlier!"
 
-    #show screen phone_message("kimi <3", "this will be good for you!")
-    #$ renpy.pause()
+    ocd "Yeah Ben, how could you not notice her earlier?"
 
-    #hide screen phone_message
-    #hide phone
+    an "I didn't think we would get any new members..."
 
-    #$renpy.pause(0.2)
-    #jump continue2
+    mc "{i}They're all staring at me like a wild animal, this is super uncomfortable.{i}"
 
-#label continue2:
-    mc "{i}Ugh, what am I doing here? This is kinda weird.{i}"
-    mc "..."
-    mc "{i}For Kimi{i}"
-    "You've been connected! Be nice!"
+    dep "Guys, don't be rude."
 
-    scene chatroom
+    dep "Don't mind them, we're always open to accepting new members!"
 
-    adhd "i really didn't mean to do that i swear."
+    mc "That's fine actually I was just thinking I should head out."
 
-    an "Sure you didn't, and I didn't mean to absolutely destroy you but here we are."
+    "You bolted out of the room before they had a chance to react."
 
-    dep "Can we all just calm down please?"
+    dep "{i}Good going guys, she could've needed help.{i}"
 
-    an "I will when she does."
+    adhd "{i}Yeah, you  scared her off! we could of had a new friend!{i}"
 
-    adhd ";P"
+    ocd "{i}Us?! It was you and Adam's petty fight!{i}"
 
-    dep "All this? Over a Pokemon game? Really guys?"
+    an "{i}Maybe she might come back?{i}"
 
-    adhd "not a guyyyyy"
+    dep "{i}Hopefully...{i}"
 
-    dep "Fine, y'all"
+    scene bed_ev
 
-    dep "Is that more to your tastes, m'lady??"
+    mc "{i}That was awful, and super embarassing, and I never wanna do that again.{i}"
+    mc "{i}This is so bad, I think one of them was even in my class.{i}"
+    mc "{i}Thanks Kimi.{i}"
+# CH1 DAY 2
 
-    adhd "4 now >:D"
+    scene classroom
 
-    mc "{i}This is going so fast... they haven't even noticed me yet..."
+    k "So, did you go to the club yesterday?"
 
+menu:
+    "Yeah I checked it out.":
+        jump honest
 
+    "Nope, not yet.":
+        jump yikes
 
+label honest:
+    mc "Yeah I checked it out, I don't this is for me though."
 
+    k "Did you really? Knowing you, you probably just peeked your head in and called it a day."
+    k "I'm sure if you gave it another try you might stay."
 
+    jump cont2
 
+label yikes:
 
+    mc "No I didn't get the chance."
+    mc "I think I'll just skip it, I have homework to catch up on, y'know?"
 
+    k "Nonsense, we're in the same class, and we both know that you've already done the work for this week and next."
+    k "Plus, being in a clul might be fun for you! Don't you want some more excitement in your life?"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    adhd "that was so weird yesterday."
-
-    bip "ugh you guys can be so difficulr sometimes"
-
-    adhd " why are you guys acting so weird. "
-
-    ocd "there's a new person here!"
-
-    "..."
-
-    de "lmao i'm so sorry [mc_username]"
-
-    menu:
-        "oh haha it's okay I'm just new to this":
-            jump newkid
-        "lolol rip it's fine":
-            jump newkid
-
-
-label newkid:
-    bip "oh hey! Sorry we didn't notice you earlier!"
-
-    adhd "hey hey hey"
-
-    ocd "welcome to our mess"
-
-    an "that's weird, I thought we had a closed gc"
-
-    "You have the strange sense that you weren't really supposed to be there."
-
-    dep "the more the merrier ig"
-
-    an "so..."
-
-    "the sinking feeling of displacement burries deeper in your stomach."
-
-    menu:
-        "so...":
-            jump so
-
-        "haha sorry, maybe i should just go?":
-            jump leaving
-
-label so:
-    us "so..."
-
-    an "dw, we wont bite."
-
-    dep "yeah when I first started I was scared too lol"
-
-    jump cont
-
-label leaving:
-    us "haha sorry, maybe i should just go."
-
-    an "no no, it's fine :)"
-
-    bip "yeah dw about it"
-
-    adhd "weLcomE tO oUr gC!!1!"
-
-    jump cont
-
-label cont:
-    adhd "wEre alL saNe hEere"
-
-    an "ur gonna scare them off dude."
-
-    adhd ">:3c"
-
-    bip "yeah so we should probably introduce ourselves."
-
-    dep "ig ur right, sound off"
-
-    an "I'll start off if that's ok, my name's Adam."
-
-    ocd "I'm Oscar, nice to meet you"
-
-    bip "it's ur boy, Ben"
-
-    adhd "HeLlO mORtaLs I AM THE ALMIGHTLY AVA, BOW BEFORE ME \(*^*\)"
-
-    dep "Devin"
-
-    menu:
-        mc "What should I say?"
-
-        "my name is [mc_name], it's nice to meet you guys!":
-            mc "{i}Well at least this is gonna add some excitement to my life at the very least.{i}"
-
-            jump cont2
-
-        "actually I'd rather you call me by my username":
-            mc "uhm, actually for now, I'd rather be called by my username, just until I get to know everyone better '^^"
-
-            an "fair enough, whatever makes you feel comfortable"
-
-            mc "thanks! I hope we all get along :)"
-
-            jump cont3
-
-# DAY 2
+    jump cont2
 
 label cont2:
+
+    mc "Why are you being so insistent about this? I really don't know how a club like that is gonna help me."
+
+    k "Trust me okay? My friend Devin is the leader, I'm gonna let him know that you're going to be swinging by after school today."
+
+    mc "Will you at least go with me today?"
+
+    k "Sorry hon, you know I have stuff going on... Maybe another time, okay?"
+
+    mc "Uh-huh okay."
+
+    k "Just, trust me, this will be good for you."
+
+    show hall
+
+    "And that's how you ended up back to where you started, the door to class 3-C."
+
+    mc "{i}Second time's a charm I guess.{i}"
+
+    show clubroom
+
+    "You peeked your head in the door, luckily there was no yelling, only a group of friends hovering over a make-shift table out of desks."
+
+    an "That was so weird yesterday..."
+
+    bip "Yeah your guy's obnoxious arguing scared a pretty girl off."
+
+    bip "We definitely need more of those around this sausage fest."
+
+    adhd "Okay, that was extremely out of line and rude."
+
+    adhd "And plus, maybe she might come back? Dev, didn't you say your friend Kimi recommended her here?"
+
+    dep "Yeah, but she also said that she might bail so who knows."
+
+    ocd "You guys do realize she's at the door right now."
+
+    "A hush goes over the room, no bosy dared to move a muscle."
+
+    adhd "{i}If we stay still she might not notice us{i}"
+
+    dep "{i}Why wouldn't we want her to notice us?{i}"
+
+    bip "{i}Or how about this. We {i}talk{i} to her like a normal human being?{i}"
+
+    "They all simultaniously turned to face you."
+
+    mc "{i}Nevermind I should've just went home.{i}"
+
+    dep "Welcome back?"
+
+    adhd "Yeah, welcome!"
+
+    ocd "I'm so sorry about our behavior."
+
+    dep "You must be [mc_name], Kimi told me about you!"
+
+    bip "Don't be scared, we don't bite."
+
+menu:
+    "Oh uhm, thanks.":
+        mc "Yeah, thanks. I'm sorry, I guess I'm just not used to meeting so many new people."
+
+        an "Haha yeah, don't worry about it, I was nervous when I first joined too."
+        jump cont3
+
+    "Yeah I'm here for Kimi.":
+        mc "Yeah I'm Kimi's friend, I promised her that I would see how I liked it here."
+        mc "But it's fine if you guys are full or something..."
+
+        dep "No, no, please stay, we're always open to new members."
+        jump cont3
+
+label cont3:
+    dep "Alright! So I think our newest member would want to know who she's spending her after school time with, yes?"
+
+    adhd "Oh right! My name's Ava! It's great to have another girl around here, I'm really happy that you're here."
+
+    ocd "I'm Oscar, delighted to meet you, I hope you find yourself comforatble amoung these {i}children{i} here."
+
+    an "I'm Adam, I'm glad that we didn't scare you away yesterday."
+
+    bip "The name's Ben, like the clock tower."
+
+    dep "And I'm Devin, the leader of this club, so make yourself comfortable here."
+
+    menu:
+        "My name's [mc_name], it's nice to meet you guys.":
+
+            jump name_reveal
+
+        "Oh uhm, alright, you can call me [mc_name].":
+            an "Hey, don't be so shy, we're all friends here now."
+
+            an "I hope that you can be comfortable here."
+
+            jump name_reveal
+
+label name_reveal:
+
+    bip "Pretty name."
+
+    adhd "Your gonna scare her off again loser."
+
+    ocd "It's your fighting that put her off in the first place."
+
+    mc "{i}Well even if it didn't go well at first, I think I might give this a try. Who knows? It could be intresting.{i}"
+
+    jump day3
+
+# DAY 3
+
+label day3:
+
+    scene black
+
+    mc "{i}It's only been a month since I started attending the club. And as always, Kimi was right. This really did help me.{i}"
+    mc "{i}Our usual club activits is usually just talking to each other, being able to have a save outlet for our problems. We talk about our day, sometimes our triggers, and how to cope with them.{i}"
+    mc "{i}It's nice having a group of friends that I can really talk to about this, making me feel less alone in the world.{i}"
+    mc "{i}I remember when I had my first panic attack, and luckily I was walking to my class the Adam appeared out of no where....{i}"
+
+    jump flashback
+
+label flashback:
+
+    scene black
+
+    mc "{i}I couldn't see. I couldn't breath. I didn't know what to do. But then I heard a familiar voice breaking through to me. It was guiding me, reminding me how to breathe."
+
+    an "Hey, hey it's okay, just look at me and take deep breaths [mc_name]."
+
+    an "In, and out with me hm?"
+
+    mc "{i}Why is he helping me?{i}"
+    mc "{i}Why is he doing this?{i}"
+
+    mc "And with his help, my panic attack was soon over, and I was suddenly more than aware of where I was and who I was with."
+
+    an "Feeling better now?"
+
+    mc "Yeah, yeah, thank you Adam."
+
+    jump day3cont
+
+label day3cont:
+    scene clubroom
+
+    an "So how is everyone today?"
+
+    menu:
+        "Good.":
+            mc "I'm feeling pretty good today."
+            an "Ah, well that's good [mc_name]!"
+
+            jump day3cont1
+
+        "Eh.":
+            mc "I could be better..."
+            an "Hm, that's a shame, do you wanna talk about it?"
+
+            jump day3cont1
+
+label day3cont1:
+    a
+    adhd "Hey do you lovebirds wanna include the whole class in this discussion or?"
+
+    bip "No actually guys, I think that our Prince here has found his long lost princess."
+
+    ocd "Benjamin, leave them alone."
+    ocd "Sometimes I wonder how we stand your nosiness sometimes."
+
+    dep "Yeah Benji, don't you have a girl waiting for you as well?"
+    dep "Oh right, you're still holding out for your Minecraft girlfriend."
+
+    bip "She's not a Minecraft girlfriend! She's real!"
+
+    adhd "Yeah in your dreams."
+
+    bip "Whatever, let's just leave the {i}lovebirds{i} alone."
+
+    dep "Seriously , Ben knock it off, that wasn't cool."
+
+    adhd "Yeah {i}Ben{i} knooockk itt ooofff."
+
+    "You could see out of the corner of your eye, Adam's face contoring into a fake smile, a sort of anxious and angry aura began to surrond him."
+
+    #show an_smile
+
+    an "Yeah {i}Ben{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
+
+    "The clubroom air stilled. You silently looked around the room, Ava was fidgeting was her fingers, never looking at the same place twice, Ben looked slightly angry, but mostly confused. Oscar was instantly fizated on a point on the floor, seemingly unaware of the world around him."
+    "Devin looked around the room as well, hugging himself, his leadership role seeming to fall apart. You finally looked back at Adam who looked even more anxious from the quiet then before."
+
+    mc "{i}This isn't good.{i}"
+    mc"{i}I gotta clear the air somehow.{i}"
+
+    menu:
+        "Let's go on a trip!":
+            mc "Hey guys, how about we go on a club field trip or something! I feel like that'll be fun."
+
+
+        "other":
+            mc "yikes this is uncomfortable"
+
+
 
 
 
