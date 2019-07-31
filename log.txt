@@ -9651,4 +9651,145 @@ Using gl renderer.
 Texture testing:
 - Hardware max texture size: 16384
 - 64px textures work.
-- 12
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+FBO Maximum Texture Size: 16384
+Root FBO is: 0
+Total time until interface ready: 15535.5140002s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.021667 seconds.
+- Frame drawn at 0.047667 seconds.
+- Frame drawn at 0.064667 seconds.
+- Frame drawn at 0.082667 seconds.
+- 0.082667 seconds to render 5 frames.
+Resetting cache.
+Bootstrap to the start of init.init took 15605.49s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.07s
+Loading script took 0.82s
+Loading save slot metadata. took 0.17s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 11: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 12: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 14: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 20: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 29: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 32: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 133: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 136: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 137: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 150: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 152: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 154: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 269: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 272: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 273: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 331: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 332: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 335: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 390: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 395: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 396: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 522: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 524: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 526: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 543: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 547: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 551: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
+                                                    ^
+
+File "game/script.rpy", line 557: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 559: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 561: expected statement.
+    >>>>>>> 02d282e109e972977d4e7805f0b1d4732

@@ -1,13 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
+<<<<<<< HEAD
 While loading <'Image' u'Ava sketch.png'>:
   File "game/script.rpy", line 331, in script
     
 IOError: Couldn't find file 'Ava sketch.png'.
+=======
+While running game code:
+  File "game/script.rpy", line 400, in script
+    jump day3cont1
+ScriptError: could not find label 'day3cont1'.
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/script.rpy", line 331, in script
     
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
@@ -59,8 +67,21 @@ Full traceback:
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
 IOError: Couldn't find file 'Ava sketch.png'.
+=======
+  File "game/script.rpy", line 400, in script
+    jump day3cont1
+  File "C:\Users\Agnes\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 1695, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Agnes\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\script.py", line 894, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'day3cont1'.
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 Mood calls 1.0
+<<<<<<< HEAD
 Wed Jul 31 00:53:30 2019
+=======
+Sun Jul 28 15:45:15 2019
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6

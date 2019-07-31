@@ -8,11 +8,16 @@ image bed_day = "bedroom day-afternoon.png"
 image bed_ev = "bedroom evening.png"
 image bed_night = "bedroom night.png"
 image hall = "Hallway.png"
+<<<<<<< HEAD
+=======
+# EXTRAS
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
 # EXTRAS
 
 # CHAR IMAGES
 
+<<<<<<< HEAD
 # PLACE HOLDERS
 image dep = "dep.png"
 image ocd = "ocd.png"
@@ -21,6 +26,10 @@ image ocd = "ocd.png"
 image bip = "ben.png"
 # AVA
 image ava_normal = "ava.png"
+=======
+# AVA
+image ava_normal = "Ava sketch.png"
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 # ADAM
 image an_normal = "anxiety_sketch.png"
 # MC
@@ -121,8 +130,11 @@ label start:
 
 # continue choice 1
 label continue:
+<<<<<<< HEAD
     show kimi
     with dissolve
+=======
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
     k "Anyways, I heard about this club that can help! The club room is in C-3"
 
     mc "Hmmm, I don't know Kimi, I think I can handle this myself..."
@@ -135,7 +147,11 @@ label continue:
 
     mc "*sigh* {i}Fine, I should at least give it a look at, Kimi's just trying to help!{i}"
 
+<<<<<<< HEAD
     mc "{i}BetterMoodClub, here I come.{i}"
+=======
+    mc "{i}BetterMoodClub, that sure sounds like a cheesy visual novel.{i}"
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
     scene black
 
@@ -250,8 +266,11 @@ label cont1:
 
     scene classroom
 
+<<<<<<< HEAD
     show kimi at center
     with dissolve
+=======
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
     k "So, did you go to the club yesterday?"
 
 menu:
@@ -302,11 +321,18 @@ label cont2:
 
     show hall
 
+    show hall
+
     "And that's how you ended up back to where you started, the door to class 3-C."
 
     mc "{i}Second time's a charm I guess.{i}"
 
     show clubroom
+<<<<<<< HEAD
+=======
+
+    "You peeked your head in the door, luckily there was no yelling, only a group of friends hovering over a make-shift table out of desks."
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
     "You peeked your head in the door, luckily there was no yelling, only a group of friends hovering over a make-shift table out of desks."
     show an_normal at center
@@ -361,10 +387,13 @@ label cont2:
     with dissolve
     dep "{i}Why wouldn't we want her to notice us?{i}"
 
+<<<<<<< HEAD
     show dep at right
     with move
     show bip at center
     with dissolve
+=======
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
     bip "{i}Or how about this. We {i}talk{i} to her like a normal human being?{i}"
 
     "They all simultaniously turned to face you."
@@ -490,7 +519,11 @@ label day3cont:
             jump day3cont1
 
 label day3cont1:
+<<<<<<< HEAD
 
+=======
+    a
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
     adhd "Hey do you lovebirds wanna include the whole class in this discussion or?"
 
     bip "No actually guys, I think that our Prince here has found his long lost princess."
@@ -507,15 +540,25 @@ label day3cont1:
 
     bip "Whatever, let's just leave the {i}lovebirds{i} alone."
 
+<<<<<<< HEAD
     dep "Seriously Dev, knock it off, that wasn't cool."
 
     adhd "Yeah {i}Dev{i} knooockk itt ooofff."
+=======
+    dep "Seriously , Ben knock it off, that wasn't cool."
+
+    adhd "Yeah {i}Ben{i} knooockk itt ooofff."
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
     "You could see out of the corner of your eye, Adam's face contoring into a fake smile, a sort of anxious and angry aura began to surrond him."
 
     #show an_smile
 
+<<<<<<< HEAD
     an "Yeah {i}Devin{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
+=======
+    an "Yeah {i}Ben{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
     "The clubroom air stilled. You silently looked around the room, Ava was fidgeting was her fingers, never looking at the same place twice, Ben looked slightly angry, but mostly confused. Oscar was instantly fizated on a point on the floor, seemingly unaware of the world around him."
     "Devin looked around the room as well, hugging himself, his leadership role seeming to fall apart. You finally looked back at Adam who looked even more anxious from the quiet then before."
@@ -529,7 +572,11 @@ label day3cont1:
 
 
         "other":
+<<<<<<< HEAD
             mc "yikes sis"
+=======
+            mc "yikes this is uncomfortable"
+>>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
 
 
 
