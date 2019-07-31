@@ -2,103 +2,43 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 11: expected statement.
+File "game/script.rpy", line 378: expected statement.
     <<<<<<< HEAD
                 ^
 
-File "game/script.rpy", line 12: expected statement.
+File "game/script.rpy", line 383: expected statement.
     =======
           ^
 
-File "game/script.rpy", line 14: expected statement.
+File "game/script.rpy", line 384: expected statement.
     >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
                                                     ^
 
-File "game/script.rpy", line 20: expected statement.
+File "game/script.rpy", line 510: expected statement.
     <<<<<<< HEAD
                 ^
 
-File "game/script.rpy", line 29: expected statement.
+File "game/script.rpy", line 512: expected statement.
     =======
           ^
 
-File "game/script.rpy", line 32: expected statement.
+File "game/script.rpy", line 514: expected statement.
     >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
                                                     ^
 
-File "game/script.rpy", line 133: expected statement.
+File "game/script.rpy", line 531: expected statement.
     <<<<<<< HEAD
                 ^
 
-File "game/script.rpy", line 136: expected statement.
+File "game/script.rpy", line 535: expected statement.
     =======
           ^
 
-File "game/script.rpy", line 137: expected statement.
+File "game/script.rpy", line 539: expected statement.
     >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
                                                     ^
 
-File "game/script.rpy", line 150: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 152: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 154: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 269: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 272: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 273: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 331: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 332: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 335: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 390: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 395: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 396: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 522: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 524: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 526: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 543: expected statement.
+File "game/script.rpy", line 545: expected statement.
     <<<<<<< HEAD
                 ^
 
@@ -106,33 +46,21 @@ File "game/script.rpy", line 547: expected statement.
     =======
           ^
 
-File "game/script.rpy", line 551: expected statement.
+File "game/script.rpy", line 549: expected statement.
     >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
                                                     ^
 
-File "game/script.rpy", line 557: expected statement.
+File "game/script.rpy", line 563: expected statement.
     <<<<<<< HEAD
                 ^
 
-File "game/script.rpy", line 559: expected statement.
+File "game/script.rpy", line 565: expected statement.
     =======
           ^
 
-File "game/script.rpy", line 561: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 575: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 577: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 579: expected statement.
+File "game/script.rpy", line 567: expected statement.
     >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
                                                     ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Wed Jul 31 01:46:51 2019
+Wed Jul 31 02:00:38 2019
