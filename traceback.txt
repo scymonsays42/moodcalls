@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'clubroom.png'>:
-  File "game/script.rpy", line 135, in script
-    adhd "I didn't mean to do that! I swear!"
-IOError: Couldn't find file 'clubroom.png'.
+While loading <'Image' u'Ava sketch.png'>:
+  File "game/script.rpy", line 331, in script
+    
+IOError: Couldn't find file 'Ava sketch.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 135, in script
-    adhd "I didn't mean to do that! I swear!"
+  File "game/script.rpy", line 331, in script
+    
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\exports.py", line 1336, in say
@@ -58,9 +58,9 @@ Full traceback:
     surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'clubroom.png'.
+IOError: Couldn't find file 'Ava sketch.png'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 Mood calls 1.0
-Thu Jul 25 22:13:36 2019
+Wed Jul 31 00:53:30 2019
