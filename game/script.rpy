@@ -530,9 +530,15 @@ label day3cont1:
 
     #show an_smile
 
+<<<<<<< HEAD
 
     an "Yeah {i}Devin{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
 
+=======
+<<<<<<< HEAD
+    an "Yeah {i}Ben{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
+=======
+>>>>>>> d4b3ab3aa7b5b9617214ffdbef114bb2a5860d63
     an "Yeah {i}Ben{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
 
 
