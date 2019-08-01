@@ -2,65 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 378: expected statement.
-    <<<<<<< HEAD
-                ^
+File "game/script.rpy", line 834: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    zoom 3
+    ^
 
-File "game/script.rpy", line 383: expected statement.
-    =======
-          ^
+File "game/script.rpy", line 1447: expected menuitem
+    scene bedroom_morn
+    ^
 
-File "game/script.rpy", line 384: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
+File "game/script.rpy", line 1608: expected statement.
+    "He's cornered you in the corner now, you could feel his heavy breath on your face."\
+                                                                                        ^
 
-File "game/script.rpy", line 510: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 512: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 514: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 531: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 535: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 539: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 545: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 547: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 549: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
-
-File "game/script.rpy", line 563: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 565: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 567: expected statement.
-    >>>>>>> 02d282e109e972977d4e7805f0b1d473226fc9e6
-                                                    ^
+File "game/script.rpy", line 1611: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    zoom 3
+    ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Wed Jul 31 02:00:38 2019
+Thu Aug 01 02:29:28 2019
