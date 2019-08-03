@@ -19,13 +19,23 @@ image ocd = "oscar.png"
 
 # DEV
 image dep = "devin sketch.png"
+image dep_mad = "devin irritated_scolding trans.png"
+image dep_nerv = "devin nervous trans.png"
 # BEN
 image bip = "ben2.png"
-# adhd
+image bip_guilt = "ben guilty trans.png"
+image bip_smile = "ben happy trans.png"
+image bip_sup = "ben surprised trans.png"
+image bip_irr = "ben irritated trans (1).png"
+# AVA
 image adhd = "ava2.png"
-
+image adhd_annoy = "ava_annoy.png"
+image adhd_smile = "ava_smile.png"
+image adhd_excited = "ava excited trans.png"
 # ADAM
 image an = "anxiety_sketch.png"
+image an_blush = "addam blushing trans.png"
+
 # MC
 
 #KIMI PICS
@@ -86,7 +96,7 @@ label start:
     "Are you a boy or a girl?"
     menu:
         "boy!":
-            jump choice_boy
+            jump choice_boy2
 
         "girl!":
             jump choice_girl
@@ -169,12 +179,15 @@ label continue:
     with dissolve
     an "Oh sure you didn't, and I didn't mean to utterly destroy you in our Pokemon tournament yesterday."
 
-    show dep at center
+    show dep_nerv at center
     with dissolve
     dep "Can we please drop this? You two are acting like children."
 
-    an "I can, but I don't know about adhd here."
 
+    an "I can, but I don't know about Ava here."
+    hide adhd
+    show adhd_annoy at left
+    with dissolve
     adhd "Hey! What's that supposed to mean?!"
 
     adhd "Oosccaarr, Adam's bullying me!"
@@ -184,12 +197,12 @@ label continue:
     ocd "All this? Over a Pokemon game, really?"
 
     adhd "You guys just don't understand!"
-    hide adhd
+    hide adhd_annoy
     show bip at left
     bip "You guys can get really annoying sometimes you know?"
 
     hide bip
-    hide dep
+    hide dep_nerv
     show ocd at center
     with move
     ocd "Agreed, and look at the mess you guys made."
@@ -228,10 +241,13 @@ label cont1:
     mc "{i}They're all staring at me like a wild animal, this is super uncomfortable.{i}"
 
     hide bip
-    show dep at left
+    show dep_mad at left
     with dissolve
     dep "Guys, don't be rude."
 
+    hide dep_mad
+    show dep at left
+    with dissolve
     dep "Don't mind them, we're always open to accepting new members!"
 
     mc "That's fine actually I was just thinking I should head out."
@@ -239,6 +255,9 @@ label cont1:
     "You bolted out of the room before they had a chance to react."
 
     scene hallway
+    hide dep_mad
+    show dep_nerv
+    with dissolve
     dep "{i}Good going guys, she could've needed help.{i}"
 
     adhd "{i}Yeah, you  scared her off! we could of had a new friend!{i}"
@@ -327,12 +346,15 @@ label cont2:
 
     show an at left
     with move
-    show bip at center
+    show bip_irr at center
     with dissolve
 
     bip "Yeah your guy's obnoxious arguing scared a pretty girl off."
-
+    hide bip_irr
+    show bip at center
+    with dissolve
     bip "We definitely need more of those around this sausage fest."
+
     show bip at right
     with move
     show adhd at center
@@ -392,25 +414,31 @@ label cont2:
     with move
     show adhd at center
     with dissolve
+    hide adhd
+    show adhd_smile
+    with dissolve
     adhd "Yeah, welcome!"
 
-    show adhd at left
+    show adhd_smile at left
     with move
     show ocd at center
     with dissolve
     ocd "I'm so sorry about our behavior."
 
     hide ocd
-    hide adhd
+    hide adhd_smile
     show dep at center
     with move
     dep "You must be [mc_name], Kimi told me about you!"
 
     show bip at right
     with dissolve
+    hide bip
+    show bip_smile at right
+    with dissolve
     bip "Don't be scared, we don't bite."
 
-    hide bip
+    hide bip_smile
     hide dep
 menu:
     "Oh uhm, thanks.":
@@ -437,11 +465,11 @@ label cont3:
 
     dep "Alright! So I think our newest member would want to know who she's spending her after school time with, yes?"
 
-    show adhd at center
+    show adhd_excited at center
     with dissolve
     adhd "Oh right! My name's Ava! It's great to have another girl around here, I'm really happy that you're here."
 
-    hide adhd
+    hide adhd_excited
     show ocd at center
     with dissolve
     ocd "I'm Oscar, delighted to meet you, I hope you find yourself comfortable amoung these {i}children{i} here."
@@ -452,11 +480,11 @@ label cont3:
     an "I'm Adam, I'm glad that we didn't scare you away yesterday."
 
     hide an
-    show bip at center
+    show bip_smile at center
     with dissolve
     bip "The name's Ben, like the clock tower."
 
-    hide bip
+    hide bip_smile
     show dep at center
     with dissolve
     dep "And I'm Devin, the leader of this club, so make yourself comfortable here."
@@ -505,7 +533,7 @@ label name_reveal:
 
 label day3:
 
-    scene
+    scene black
 
     mc "{i}It's only been a month since I started attending the club. And as always, Kimi was right. This really did help me.{i}"
     mc "{i}Our usual club activities is usually just talking to each other, being able to have a save outlet for our problems. We talk about our day, sometimes our triggers, and how to cope with them.{i}"
@@ -569,9 +597,12 @@ label day3cont1:
     with move
     show bip at center
     with dissolve
+    hide bip
+    show bip_smile at center
+    with dissolve
     bip "No actually guys, I think that our Prince here has found his long lost princess."
 
-    hide bip
+    hide bip_smile
     show ocd at center
     with dissolve
     ocd "Benjamin, leave them alone."
@@ -584,7 +615,7 @@ label day3cont1:
     dep "Yeah Benji, don't you have a girl waiting for you as well?"
     dep "Oh right, you're still holding out for your Minecraft girlfriend."
 
-    show bip at center
+    show bip_sup at center
     with dissolve
     bip "She's not a Minecraft girlfriend! She's real!"
 
@@ -592,11 +623,12 @@ label day3cont1:
 
     hide adhd
     hide dep
+    hide bip_sup
     show bip at center
     with move
     bip "Whatever, let's just leave the {i}lovebirds{i} alone."
 
-    show dep at right
+    show dep_mad at right
     with dissolve
     dep "Seriously Ben, knock it off, that wasn't cool."
 
@@ -609,10 +641,10 @@ label day3cont1:
 
     "The clubroom air stilled. You silently looked around the room, adhd was fidgeting was her fingers, never looking at the same place twice, Ben looked slightly angry, but mostly confused. Oscar was instantly fizated on a point on the floor, seemingly unaware of the world around him."
     "Devin looked around the room as well, hugging himself, his leadership role seeming to fall apart. You finally looked back at Adam who looked even more anxious from the quiet then before."
-
+    hide bip
     hide adhd
     hide ocd
-    hide dep
+    hide dep_mad
     mc "{i}This isn't good.{i}"
     mc"{i}I gotta clear the air somehow.{i}"
 ########################
@@ -670,7 +702,7 @@ menu :
 
 # DAY 4
 label day4:
-    scene bedroom_morn
+    scene bed_morn
     with fade
 
     mc "{i}Today's the day of our makeshift '{i}Club Field Trip{i}' and I can already feel the regret settling in.{i}"
@@ -678,12 +710,12 @@ label day4:
 
     "Everything did not go fine."
 
-    scene bedroom_day
+    scene bed_day
     with fade
 
     mc "Well I've got everything ready now... This is fine, I feel fine, everything's {i}fine{i}."
 
-    "{b}BBBZZZZZZZZZZZ{B}"
+    "{b}BBBZZZZZZZZZZZ{b}"
 
     mc "Shoot they're already here."
 
@@ -701,10 +733,13 @@ label day4:
     with move
     show bip at center
     with dissolve
+    hide bip
+    show bip_irr at center
+    with dissolve
     bip "Kinda disapointing if I'm honest."
 
     hide adhd
-    show bip at right
+    show bip_irr at right
     with move
     show an at center
     with dissolve
@@ -715,7 +750,7 @@ label day4:
     hide adhd
     hide an
     hide ocd
-    hide bip
+    hide bip_irr
     show dep at center
     with dissolve
 
@@ -727,9 +762,13 @@ label day4:
     hide dep
     show bip at center
     with dissolve
+    hide bip
+    show bip_sup at center
+    with dissolve
     bip "Actually I was hoping we wouldn't have to do any club activities."
 
-    show bip at left
+    hide bip_sup
+    show bip_irr at left
     with move
     show an at center
     an "You do realize this is a '{i}Club{i} Field Trip' right?"
@@ -742,14 +781,18 @@ label day4:
     with dissolve
     dep "Anyways, let's get started."
 
-    scene bedroom_evening
+
+    scene bed_ev
     mc "{i}When we finished our club duties, everyone split up to do their own thing.{i}"
 
 menu:
     "Let's talk to Ben!":
         mc "{i}Ben's all alone in the corner, playing on his phone...{i}"
 
+        hide bip_irr
         show bip at center
+        with dissolve
+        show bip_smile at center
         with dissolve
         bip "Oh hey [mc_name], what's up?"
 
@@ -760,13 +803,20 @@ menu:
         mc "Yeah I guess, but I just don't want anything to happen like yesterday."
 
         bip "Oh, yeah that. I'm sorry you were there during that, I just got really angry all of a sudden and I let it get the best of me..."
-
+        hide bip_smile
+        show bip_guilt
+        with dissolve
         mc "Ben, don't worry about it."
 
+        hide bip_guilt
+        show bip_smile
+        with dissolve
         bip "If you say so. Thanks for talking to me [mc_name], everyone here can be a bit extreme sometime, so I'm glad you stayed around."
 
         mc "Of course."
 
+        hide bip_smile
+        hide bip
         jump gobears2
 
     "Let's talk to Adam!":
@@ -775,10 +825,16 @@ menu:
 
         show an at center
         with dissolve
+        hide an
+        show an_blush
+        with dissolve
         an "I'm doing better now. Thanks."
 
         mc "That's good, I'm just double checking."
 
+        hide an_blush
+        show an
+        with dissolve
         an "Haha, don't worry about me. Plus I think {i}I'm{i} the one who should be checking up on you."
 
         mc "Heh, I guess so."
@@ -804,6 +860,7 @@ label gobears2:
 
     dep "Yeah of course."
 
+    hide dep
     "Everyone slowly exited the room in single file."
 
     show an at center
@@ -833,29 +890,21 @@ label gobears2:
 
     "He's cornered you in the corner now, you could feel his heavy breath on your face."
 
-    show adam at center:
-        zoom 2
     mc "Adam seriously you're scaring me."
 
     an "I am being serious, I {i}can't{i} lose you."
 
-    mc "{i}Should I scream? Should I try to help? This definitley isn't healthy.{i}"
+    mc "{i}Should I scream? Should I try to help? This definitely isn't healthy.{i}"
 
     an "{b}You can't leave me.{b}"
 
+    mc "Adam what are you doing?"
 
-#label jump = game over
+    an "Just don't {i}{b}LEaVe Me.{b}{i}"
 
-    # This ends the game.
+    mc "Adam are you okay? What's going on??"
 
-    return
-
-
-
-
-
-
-
+    an "{i}{b}DoN't LeAvE mE{b}{i}"
 
 
 
@@ -865,10 +914,9 @@ label gobears2:
 
     return
 
-label choice_boy:
+label choice_boy2:
     python:
         mc_name = renpy.input("What is your name?")
-
 
     "Alright '[mc_name]' welcome to Mood Calls!"
     scene hall
@@ -889,13 +937,11 @@ label choice_boy:
         show k_smile
         with dissolve
         k "Let's call it bestfriend intuition, and we'll leave it at that."
-
         jump continue2
     label choice_fine2:
         show k_smile
         with dissolve
         k "Hey now, don't be all defensive, I just wanted to help."
-
         jump continue2
 
 # continue choice 1
@@ -946,12 +992,15 @@ label continue2:
     with dissolve
     an "Oh sure you didn't, and I didn't mean to utterly destroy you in our Pokemon tournament yesterday."
 
-    show dep at center
+    show dep_nerv at center
     with dissolve
     dep "Can we please drop this? You two are acting like children."
 
-    an "I can, but I don't know about adhd here."
 
+    an "I can, but I don't know about Ava here."
+    hide adhd
+    show adhd_annoy at left
+    with dissolve
     adhd "Hey! What's that supposed to mean?!"
 
     adhd "Oosccaarr, Adam's bullying me!"
@@ -961,12 +1010,12 @@ label continue2:
     ocd "All this? Over a Pokemon game, really?"
 
     adhd "You guys just don't understand!"
-    hide adhd
+    hide adhd_annoy
     show bip at left
     bip "You guys can get really annoying sometimes you know?"
 
     hide bip
-    hide dep
+    hide dep_nerv
     show ocd at center
     with move
     ocd "Agreed, and look at the mess you guys made."
@@ -1005,10 +1054,13 @@ label cont12:
     mc "{i}They're all staring at me like a wild animal, this is super uncomfortable.{i}"
 
     hide bip
-    show dep at left
+    show dep_mad at left
     with dissolve
     dep "Guys, don't be rude."
 
+    hide dep_mad
+    show dep at left
+    with dissolve
     dep "Don't mind them, we're always open to accepting new members!"
 
     mc "That's fine actually I was just thinking I should head out."
@@ -1016,9 +1068,12 @@ label cont12:
     "You bolted out of the room before they had a chance to react."
 
     scene hallway
+    hide dep_mad
+    show dep_nerv
+    with dissolve
     dep "{i}Good going guys, he could've needed help.{i}"
 
-    adhd "{i}Yeah, you scared him off! We could of had a new friend!{i}"
+    adhd "{i}Yeah, you  scared him off! we could of had a new friend!{i}"
 
     ocd "{i}Us?! It was you and Adam's petty fight!{i}"
 
@@ -1055,7 +1110,6 @@ label honest2:
     with dissolve
     k "Did you really? Knowing you, you probably just peeked your head in and called it a day."
     k "I'm sure if you gave it another try you might stay."
-    hide k_mad
 
     jump cont22
 
@@ -1088,7 +1142,7 @@ label cont22:
     mc "Uh-huh okay."
 
     k "Just, trust me, this will be good for you."
-    hide k_smile
+    hide kimi
 
     show hall
 
@@ -1105,11 +1159,14 @@ label cont22:
 
     show an at left
     with move
-    show bip at center
+    show bip_irr at center
     with dissolve
 
-    bip "Yeah your guy's obnoxious arguing scared a new memeber off."
-    bip "They probably realized that they didn't want to deal with {i}children{i} in their free time."
+    bip "Yeah your guy's obnoxious arguing scared a pretty boy off."
+    hide bip_irr
+    show bip at center
+    with dissolve
+    bip "We definitely need more of those around this sausage fest."
 
     show bip at right
     with move
@@ -1117,14 +1174,17 @@ label cont22:
     with dissolve
     adhd "Okay, that was extremely out of line and rude."
 
-    adhd "And plus, maybe he might come back? Dev, didn't you say your friend Kimi recommended him here?"
+    adhd "And plus, maybe he might come back? Dev, didn't you say your friend Kimi recommended her here?"
 
     hide bip
+    with dissolve
     hide adhd
+    with dissolve
     hide an
+    with dissolve
     show dep at center
     with dissolve
-    dep "Yeah, but Kimi also said that he might bail so who knows."
+    dep "Yeah, but he also said that he might bail so who knows."
 
     show ocd at right
     with dissolve
@@ -1167,25 +1227,31 @@ label cont22:
     with move
     show adhd at center
     with dissolve
+    hide adhd
+    show adhd_smile
+    with dissolve
     adhd "Yeah, welcome!"
 
-    show adhd at left
+    show adhd_smile at left
     with move
     show ocd at center
     with dissolve
     ocd "I'm so sorry about our behavior."
 
     hide ocd
-    hide adhd
+    hide adhd_smile
     show dep at center
     with move
     dep "You must be [mc_name], Kimi told me about you!"
 
     show bip at right
     with dissolve
+    hide bip
+    show bip_smile at right
+    with dissolve
     bip "Don't be scared, we don't bite."
 
-    hide bip
+    hide bip_smile
     hide dep
 menu:
     "Oh uhm, thanks.":
@@ -1195,6 +1261,7 @@ menu:
         with dissolve
         an "Haha yeah, don't worry about it, I was nervous when I first joined too."
         hide an
+
         jump cont32
 
     "Yeah I'm here for Kimi.":
@@ -1209,15 +1276,13 @@ menu:
 
 label cont32:
 
-    show dep at center
-    dep "Alright! So I think our newest member would want to know who he's spending his after school time with, yes?"
+    dep "Alright! So I think our newest member would want to know who he's spending her after school time with, yes?"
 
-    hide dep
-    show adhd at center
+    show adhd_excited at center
     with dissolve
     adhd "Oh right! My name's Ava! It's great to have a new face around here, I'm really happy that you're here."
 
-    hide adhd
+    hide adhd_excited
     show ocd at center
     with dissolve
     ocd "I'm Oscar, delighted to meet you, I hope you find yourself comfortable amoung these {i}children{i} here."
@@ -1228,11 +1293,11 @@ label cont32:
     an "I'm Adam, I'm glad that we didn't scare you away yesterday."
 
     hide an
-    show bip at center
+    show bip_smile at center
     with dissolve
     bip "The name's Ben, like the clock tower."
 
-    hide bip
+    hide bip_smile
     show dep at center
     with dissolve
     dep "And I'm Devin, the leader of this club, so make yourself comfortable here."
@@ -1282,7 +1347,6 @@ label name_reveal2:
 label day32:
 
     scene black
-    with fade
 
     mc "{i}It's only been a month since I started attending the club. And as always, Kimi was right. This really did help me.{i}"
     mc "{i}Our usual club activities is usually just talking to each other, being able to have a save outlet for our problems. We talk about our day, sometimes our triggers, and how to cope with them.{i}"
@@ -1337,9 +1401,7 @@ label day3cont2:
             jump day3cont12
 
 label day3cont12:
-    show an at right
-    with move
-
+    hide an
     show adhd at center
     with dissolve
     adhd "Hey do you two wanna include the whole class in this discussion or?"
@@ -1348,9 +1410,12 @@ label day3cont12:
     with move
     show bip at center
     with dissolve
-    bip "No actually guys, I think that our Prince here has found his long lost prince."
-
     hide bip
+    show bip_smile at center
+    with dissolve
+    bip "No actually guys, I think that our Prince here has found his long lost princess."
+
+    hide bip_smile
     show ocd at center
     with dissolve
     ocd "Benjamin, leave them alone."
@@ -1363,7 +1428,7 @@ label day3cont12:
     dep "Yeah Benji, don't you have a girl waiting for you as well?"
     dep "Oh right, you're still holding out for your Minecraft girlfriend."
 
-    show bip at center
+    show bip_sup at center
     with dissolve
     bip "She's not a Minecraft girlfriend! She's real!"
 
@@ -1371,31 +1436,31 @@ label day3cont12:
 
     hide adhd
     hide dep
+    hide bip_sup
     show bip at center
     with move
     bip "Whatever, let's just leave the {i}lovebirds{i} alone."
 
-    show dep at right
+    show dep_mad at right
     with dissolve
-    dep "Seriously Dev, knock it off, that wasn't cool."
+    dep "Seriously Ben, knock it off, that wasn't cool."
 
     show adhd at left
     with dissolve
-    adhd "Yeah {i}Dev{i} knooockk itt ooofff."
-
-    hide adhd
-    hide dep
-    hide bip
+    adhd "Yeah {i}Ben{i} knooockk itt ooofff."
 
     "You could see out of the corner of your eye, Adam's face contoring into a fake smile, a sort of anxious and angry aura began to surround him."
     an "Yeah {i}Ben{i}, I was just being nice, and that wasn't a very cool thing to say. {b}{i}Very uncool{i}{b}."
 
     "The clubroom air stilled. You silently looked around the room, adhd was fidgeting was her fingers, never looking at the same place twice, Ben looked slightly angry, but mostly confused. Oscar was instantly fizated on a point on the floor, seemingly unaware of the world around him."
     "Devin looked around the room as well, hugging himself, his leadership role seeming to fall apart. You finally looked back at Adam who looked even more anxious from the quiet then before."
-
+    hide bip
+    hide adhd
+    hide ocd
+    hide dep_mad
     mc "{i}This isn't good.{i}"
     mc"{i}I gotta clear the air somehow.{i}"
-
+########################
     #"Let's go on a trip!":
     mc "Hey guys, how about we go on a club field trip or something! I feel like that'll be fun."
 
@@ -1421,9 +1486,6 @@ label day3cont12:
     hide dep
 
 menu :
-    #"To the mall!":
-        #mc "How about the mall?"
-
     "To my house!":
         mc "We can always hang out at my place, I don't mind having company over."
 
@@ -1444,15 +1506,13 @@ menu :
 
         mc "You guys are funny, we're all goint to my house. It's a {i}group{i} trip everyone."
 
-        hide ocd
-        show dep at center
         dep "So it's decided, we'll go to [mc_name]'s house tomorrow."
 
         jump day42
 
 # DAY 4
 label day42:
-    scene bedroom_morn
+    scene bed_morn
     with fade
 
     mc "{i}Today's the day of our makeshift '{i}Club Field Trip{i}' and I can already feel the regret settling in.{i}"
@@ -1460,12 +1520,12 @@ label day42:
 
     "Everything did not go fine."
 
-    scene bedroom_day
+    scene bed_day
     with fade
 
     mc "Well I've got everything ready now... This is fine, I feel fine, everything's {i}fine{i}."
 
-    "{b}BBBZZZZZZZZZZZ{B}"
+    "{b}BBBZZZZZZZZZZZ{b}"
 
     mc "Shoot they're already here."
 
@@ -1483,10 +1543,13 @@ label day42:
     with move
     show bip at center
     with dissolve
+    hide bip
+    show bip_irr at center
+    with dissolve
     bip "Kinda disapointing if I'm honest."
 
     hide adhd
-    show bip at right
+    show bip_irr at right
     with move
     show an at center
     with dissolve
@@ -1497,7 +1560,7 @@ label day42:
     hide adhd
     hide an
     hide ocd
-    hide bip
+    hide bip_irr
     show dep at center
     with dissolve
 
@@ -1509,9 +1572,13 @@ label day42:
     hide dep
     show bip at center
     with dissolve
+    hide bip
+    show bip_sup at center
+    with dissolve
     bip "Actually I was hoping we wouldn't have to do any club activities."
 
-    show bip at left
+    hide bip_sup
+    show bip_irr at left
     with move
     show an at center
     an "You do realize this is a '{i}Club{i} Field Trip' right?"
@@ -1524,14 +1591,18 @@ label day42:
     with dissolve
     dep "Anyways, let's get started."
 
-    scene bedroom_evening
+
+    scene bed_ev
     mc "{i}When we finished our club duties, everyone split up to do their own thing.{i}"
 
 menu:
     "Let's talk to Ben!":
         mc "{i}Ben's all alone in the corner, playing on his phone...{i}"
 
+        hide bip_irr
         show bip at center
+        with dissolve
+        show bip_smile at center
         with dissolve
         bip "Oh hey [mc_name], what's up?"
 
@@ -1542,14 +1613,21 @@ menu:
         mc "Yeah I guess, but I just don't want anything to happen like yesterday."
 
         bip "Oh, yeah that. I'm sorry you were there during that, I just got really angry all of a sudden and I let it get the best of me..."
-
+        hide bip_smile
+        show bip_guilt
+        with dissolve
         mc "Ben, don't worry about it."
 
+        hide bip_guilt
+        show bip_smile
+        with dissolve
         bip "If you say so. Thanks for talking to me [mc_name], everyone here can be a bit extreme sometime, so I'm glad you stayed around."
 
         mc "Of course."
 
-        jump gobears
+        hide bip_smile
+        hide bip
+        jump gobears22
 
     "Let's talk to Adam!":
         mc "{i}I should go check on Adam.{i}"
@@ -1557,17 +1635,23 @@ menu:
 
         show an at center
         with dissolve
+        hide an
+        show an_blush
+        with dissolve
         an "I'm doing better now. Thanks."
 
         mc "That's good, I'm just double checking."
 
+        hide an_blush
+        show an
+        with dissolve
         an "Haha, don't worry about me. Plus I think {i}I'm{i} the one who should be checking up on you."
 
         mc "Heh, I guess so."
 
-        jump gobears
+        jump gobears22
 
-label gobears:
+label gobears22:
     mc "{i}Well I've made my rounds of the various club members, checking up on everyone. But as I did, I felt like someone was watching me the whole time. Something doesn't feel right.{i}"
 
     show an at center
@@ -1586,6 +1670,7 @@ label gobears:
 
     dep "Yeah of course."
 
+    hide dep
     "Everyone slowly exited the room in single file."
 
     show an at center
@@ -1615,15 +1700,22 @@ label gobears:
 
     "He's cornered you in the corner now, you could feel his heavy breath on your face."
 
-    show an  at center:
-        zoom 2
     mc "Adam seriously you're scaring me."
 
     an "I am being serious, I {i}can't{i} lose you."
 
-    mc "{i}Should I scream? Should I try to help? This definitley isn't healthy.{i}"
+    mc "{i}Should I scream? Should I try to help? This definitely isn't healthy.{i}"
 
     an "{b}You can't leave me.{b}"
+
+    mc "Adam what are you doing?"
+
+    an "Just don't {i}{b}LEaVe Me.{b}{i}"
+
+    mc "Adam are you okay? What's going on??"
+
+    an "{i}{b}DoN't LeAvE mE{b}{i}"
+
 
 
 #label jump = game over

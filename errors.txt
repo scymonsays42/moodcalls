@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 834: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    zoom 3
-    ^
-
-File "game/script.rpy", line 1447: expected menuitem
-    scene bedroom_morn
-    ^
-
-File "game/script.rpy", line 1608: expected statement.
-    "He's cornered you in the corner now, you could feel his heavy breath on your face."\
-                                                                                        ^
-
-File "game/script.rpy", line 1611: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    zoom 3
-    ^
+The label start is defined twice, at
+  File "game/script.rpy", line 65 and
+  File "game/script.rpy", line 921.
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Thu Aug 01 02:29:28 2019
+Fri Aug 02 00:56:56 2019

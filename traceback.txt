@@ -1,36 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00keymap.rpy", line 421, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 421, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 440, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+While loading <'Image' u'gui/game_menu.png'>:
+IOError: Couldn't find file 'gui/game_menu.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 421, in script
-    python hide:
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in script
+    $ ui.interact()
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ast.py", line 912, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\python.py", line 2004, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "renpy/common/00keymap.rpy", line 421, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 440, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\loadsave.py", line 398, in save
-    roots = renpy.game.log.freeze(None)
-  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\python.py", line 1901, in freeze
-    self.complete(False)
-  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\python.py", line 1511, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in <module>
+    $ ui.interact()
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\ui.py", line 295, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\core.py", line 2699, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\core.py", line 3191, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\core.py", line 2091, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 546, in renpy.display.render.render_screen
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\transition.py", line 361, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\screen.py", line 675, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\im.py", line 584, in render
+    return cache.get(self, render=True)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\im.py", line 266, in get
+    surf = image.load()
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\display\im.py", line 629, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Users\Student\Desktop\renpy-7.3.2-sdk\renpy-7.3.2-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'gui/game_menu.png'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
- 
-Thu Aug 01 02:29:19 2019
+Mood calls 1.0
+Fri Aug 02 08:18:38 2019
