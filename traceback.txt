@@ -61,4 +61,4 @@ IOError: Couldn't find file 'gui/game_menu.png'.
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 Mood calls 1.0
-Fri Aug 02 08:18:38 2019
+Fri Aug 02 22:58:17 2019
